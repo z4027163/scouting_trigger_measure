@@ -1,0 +1,950 @@
+DEBUG 2020-04-16 21:37:32.145 UTC: 	 Running on: Linux lxplus754.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 21:37:32.161 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 21:37:32.162 UTC: 	 Executing command: 'submit'
+DEBUG 2020-04-16 21:37:32.162 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 21:37:32.169 UTC: 	 Checking credentials
+DEBUG 2020-04-16 21:37:32.169 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 21:37:32.169 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 21:37:32.773 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41525
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:37:33.378 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 41524
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:37:33.378 UTC: 	 Proxy lifetime 41525 secs is different from voms extension lifetime 41524 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 21:37:33.378 UTC: 	 Proxy valid for 11:32:04 hours
+INFO 2020-04-16 21:37:33.378 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-04-16 21:37:33.378 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-04-16 21:37:33.379 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2020-04-16 21:37:33.494 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:37:33.494 UTC: 	 Checking credentials
+DEBUG 2020-04-16 21:37:33.494 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 21:37:33.494 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 21:37:34.099 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41523
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:37:34.708 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 41523
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:37:34.708 UTC: 	 Proxy valid for 11:32:03 hours
+DEBUG 2020-04-16 21:37:35.315 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u119364 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:37:35.460 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 21:37:35.569 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:37:35.569 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 21:37:35.569 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 21:37:35.873 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 694:51:31  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:37:35.874 UTC: 	 Myproxy is valid: 2501491
+DEBUG 2020-04-16 21:37:35.874 UTC: 	 Command use: submit
+DEBUG 2020-04-16 21:37:35.874 UTC: 	 Options use: ['crabConfig.py']
+DEBUG 2020-04-16 21:37:35.941 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 21:37:35.941 UTC: 	 Instance is prod
+DEBUG 2020-04-16 21:37:35.941 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 21:37:35.941 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 21:37:35.941 UTC: 	 Started submission
+DEBUG 2020-04-16 21:37:35.941 UTC: 	 Working on /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+DEBUG 2020-04-16 21:37:36.030 UTC: 	 Loading required information from the environment
+DEBUG 2020-04-16 21:37:36.030 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-04-16 21:37:36.030 UTC: 	 Loading required information from the environment
+DEBUG 2020-04-16 21:37:36.030 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-04-16 21:37:36.046 UTC: 	 UNIQUE NAME: tarUUID e3c8f7a2-2212-4fc4-9c59-5003ad25cd28 
+DEBUG 2020-04-16 21:37:36.046 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.section_('JobType')
+config.JobType.psetName = '../../test/tree_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.pyCfgParams = ['isMC=True', 'useWeights=False', 'xsec=1.00', 'addEventInfo=True']
+config.JobType.allowUndistributedCMSSW = True
+config.section_('Data')
+config.Data.unitsPerJob = 10000
+config.Data.userInputFiles = ['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root\n']
+config.Data.splitting = 'FileBased'
+config.Data.lumiMask = ''
+config.Data.outLFNDirBase = '/store/user/ccosby/newSample/'
+config.Data.outputPrimaryDataset = 'DarkPhoton2018'
+config.section_('Site')
+config.Site.whitelist = ['T2_CH_CERN']
+config.Site.storageSite = 'T2_CH_CERNBOX'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2020-04-16 21:37:36.046 UTC: 	 self.config.JobType.psetName: ../../test/tree_cfg.py
+INFO 2020-04-16 21:37:36.048 UTC: 	 Importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2020-04-16 21:37:36.048 UTC: 	 Additional parameters for the CMSSW configuration are: ['isMC=True', 'useWeights=False', 'xsec=1.00', 'addEventInfo=True']
+INFO 2020-04-16 21:37:36.464 UTC: 	 Finished importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2020-04-16 21:37:36.464 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/inputs/PSet.py
+DEBUG 2020-04-16 21:37:36.507 UTC: 	 The following EDM output files will be collected: []
+DEBUG 2020-04-16 21:37:36.507 UTC: 	 The following TFile output files will be collected: ['tree.root']
+DEBUG 2020-04-16 21:37:36.507 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2020-04-16 21:37:36.507 UTC: 	 Loading required information from the environment
+DEBUG 2020-04-16 21:37:36.507 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-04-16 21:37:36.507 UTC: 	 Making tarball in /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/inputs/e3c8f7a2-2212-4fc4-9c59-5003ad25cd28default.tgz
+DEBUG 2020-04-16 21:37:36.508 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/lib
+DEBUG 2020-04-16 21:37:36.508 UTC: 	 Adding directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/lib to tarball
+DEBUG 2020-04-16 21:37:36.519 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/biglib
+DEBUG 2020-04-16 21:37:36.519 UTC: 	 Adding directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/biglib to tarball
+DEBUG 2020-04-16 21:37:36.521 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/module
+DEBUG 2020-04-16 21:37:36.652 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/data to tarball
+DEBUG 2020-04-16 21:37:37.224 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/interface to tarball
+DEBUG 2020-04-16 21:37:37.404 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/chrisDileptonAnalysis/DileptonAnalysis/AnalysisStep/data to tarball
+DEBUG 2020-04-16 21:37:37.866 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/chrisDileptonAnalysis/DileptonAnalysis/AnalysisStep/interface to tarball
+DEBUG 2020-04-16 21:37:38.005 UTC: 	 Uploading archive /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/inputs/e3c8f7a2-2212-4fc4-9c59-5003ad25cd28default.tgz (1.925781.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2020-04-16 21:37:40.533 UTC: 	 Loading required information from the environment
+DEBUG 2020-04-16 21:37:40.533 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-04-16 21:37:40.533 UTC: 	 Making tarball in /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/inputs/debugFiles.tgz
+DEBUG 2020-04-16 21:37:40.573 UTC: 	 Uploading archive /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/inputs/debugFiles.tgz (4 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2020-04-16 21:37:40.641 UTC: 	 Result uploading input files: e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz 
+DEBUG 2020-04-16 21:37:40.641 UTC: 	 Attaching list of user-specified primary input files.
+WARNING 2020-04-16 21:37:40.641 UTC: 	 Warning: CRAB configuration parameter Data.userInputFiles contains duplicated entries. Duplicated entries will be removed.
+WARNING 2020-04-16 21:37:40.642 UTC: 	 Warning: The following output files will not be published, as they are not EDM files: ['tree.root']
+INFO 2020-04-16 21:37:40.642 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2020-04-16 21:37:40.642 UTC: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_CH_CERNBOX', 'algoargs': 10000, 'cachefilename': 'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_2_3', 'edmoutfiles': [], 'userfiles': set(['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']), 'primarydataset': 'DarkPhoton2018', 'inputdata': '', 'lfn': '/store/user/ccosby/newSample/', 'dryrun': 0, 'workflow': 'crab_20200416_233733', 'sitewhitelist': ['T2_CH_CERN'], 'nonprodsw': 1, 'tfileoutfiles': ['tree.root'], 'oneEventMode': 0, 'debugfilename': '4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2020-04-16 21:37:40.643 UTC: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_CH_CERNBOX&algoargs=10000&cachefilename=e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_2_3&primarydataset=DarkPhoton2018&inputdata=&lfn=%2Fstore%2Fuser%2Fccosby%2FnewSample%2F&dryrun=0&workflow=crab_20200416_233733&nonprodsw=1&oneEventMode=0&debugfilename=4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=1&jobarch=slc7_amd64_gcc700&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&sitewhitelist=T2_CH_CERN&tfileoutfiles=tree.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root
+DEBUG 2020-04-16 21:37:40.755 UTC: 	 Result: {u'result': [{u'RequestName': u'200416_213740:ccosby_crab_20200416_233733'}]}
+INFO 2020-04-16 21:37:40.757 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2020-04-16 21:37:40.758 UTC: 	 Task name: 200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 21:37:40.758 UTC: 	 Project dir: ./crab_20200416_233733
+INFO 2020-04-16 21:37:40.758 UTC: 	 Please use 'crab status -d ./crab_20200416_233733' to check how the submission process proceeds.
+DEBUG 2020-04-16 21:37:40.758 UTC: 	 About to return
+INFO 2020-04-16 21:37:40.761 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-16 21:39:56.872 UTC: 	 Running on: Linux lxplus754.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 21:39:56.888 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 21:39:56.888 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-16 21:39:56.889 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 21:39:56.896 UTC: 	 Checking credentials
+DEBUG 2020-04-16 21:39:56.897 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 21:39:56.897 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 21:39:57.601 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41380
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:39:58.207 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 41379
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:39:58.208 UTC: 	 Proxy lifetime 41380 secs is different from voms extension lifetime 41379 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 21:39:58.208 UTC: 	 Proxy valid for 11:29:39 hours
+DEBUG 2020-04-16 21:39:58.319 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:39:58.319 UTC: 	 Checking credentials
+DEBUG 2020-04-16 21:39:58.319 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 21:39:58.319 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 21:39:58.925 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41379
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:39:59.530 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 41378
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:39:59.530 UTC: 	 Proxy lifetime 41379 secs is different from voms extension lifetime 41378 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 21:39:59.530 UTC: 	 Proxy valid for 11:29:38 hours
+DEBUG 2020-04-16 21:39:59.667 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 21:39:59.775 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:39:59.776 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 21:39:59.776 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 21:40:00.080 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 694:49:06  (29.0 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:40:00.081 UTC: 	 Myproxy is valid: 2501346
+DEBUG 2020-04-16 21:40:00.082 UTC: 	 Command use: status
+DEBUG 2020-04-16 21:40:00.082 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-16 21:40:00.217 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 21:40:00.217 UTC: 	 Instance is prod
+DEBUG 2020-04-16 21:40:00.217 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 21:40:00.217 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 21:40:00.325 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-16 21:40:00.325 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-16 21:40:00.325 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 21:40:00.325 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-16 21:40:00.325 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-16 21:40:00.326 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 21:40:00.326 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 21:40:00.326 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-16 21:40:00.326 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-16 21:40:00.326 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 21:40:00.399 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 21:40:00.400 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-16 21:40:00.449 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [0], 'StartTimes': [], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': False, 'State': 'idle', 'ResidentSetSize': [0], 'TotalUserCpuTimeHistory': [0.0], 'SiteHistory': ['Unknown'], 'TotalSysCpuTimeHistory': [0.0]}}
+INFO 2020-04-16 21:40:00.449 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2020-04-16 21:40:00.449 UTC: 	 
+Jobs status:                    idle         		100.0% (1/1)
+INFO 2020-04-16 21:40:00.449 UTC: 	 
+No publication information available yet
+INFO 2020-04-16 21:40:00.462 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-16 21:50:49.676 UTC: 	 Running on: Linux lxplus754.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 21:50:49.691 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 21:50:49.692 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-16 21:50:49.692 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 21:50:49.705 UTC: 	 Checking credentials
+DEBUG 2020-04-16 21:50:49.705 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 21:50:49.706 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 21:50:50.410 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40727
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:50:51.017 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40727
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:50:51.017 UTC: 	 Proxy valid for 11:18:47 hours
+DEBUG 2020-04-16 21:50:51.129 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:50:51.129 UTC: 	 Checking credentials
+DEBUG 2020-04-16 21:50:51.129 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 21:50:51.129 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 21:50:51.736 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40726
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:50:52.340 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40725
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:50:52.341 UTC: 	 Proxy lifetime 40726 secs is different from voms extension lifetime 40725 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 21:50:52.341 UTC: 	 Proxy valid for 11:18:45 hours
+DEBUG 2020-04-16 21:50:52.416 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 21:50:52.525 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:50:52.525 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 21:50:52.525 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 21:50:52.829 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 694:38:14  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:50:52.830 UTC: 	 Myproxy is valid: 2500694
+DEBUG 2020-04-16 21:50:52.831 UTC: 	 Command use: status
+DEBUG 2020-04-16 21:50:52.831 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-16 21:50:52.971 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 21:50:52.971 UTC: 	 Instance is prod
+DEBUG 2020-04-16 21:50:52.971 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 21:50:52.971 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 21:50:53.049 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-16 21:50:53.049 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-16 21:50:53.049 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 21:50:53.049 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-16 21:50:53.049 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-16 21:50:53.049 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 21:50:53.049 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 21:50:53.050 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-16 21:50:53.050 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-16 21:50:53.050 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 21:50:53.130 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 21:50:53.130 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-16 21:50:53.177 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [8.0, 308.0], 'StartTimes': [1587073449.0], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [708580], 'TotalUserCpuTimeHistory': [245.0], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [11.0]}}
+INFO 2020-04-16 21:50:53.177 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2020-04-16 21:50:53.177 UTC: 	 
+Jobs status:                    running      		100.0% (1/1)
+INFO 2020-04-16 21:50:53.177 UTC: 	 
+No publication information available yet
+INFO 2020-04-16 21:50:53.187 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-16 21:52:37.506 UTC: 	 Running on: Linux lxplus754.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 21:52:37.520 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 21:52:37.520 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-16 21:52:37.521 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 21:52:37.529 UTC: 	 Checking credentials
+DEBUG 2020-04-16 21:52:37.530 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 21:52:37.530 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 21:52:38.134 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40619
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:52:38.739 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40619
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:52:38.740 UTC: 	 Proxy valid for 11:16:59 hours
+DEBUG 2020-04-16 21:52:38.854 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:52:38.854 UTC: 	 Checking credentials
+DEBUG 2020-04-16 21:52:38.854 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 21:52:38.854 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 21:52:39.561 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 40618
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:52:40.169 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 40617
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:52:40.169 UTC: 	 Proxy lifetime 40618 secs is different from voms extension lifetime 40617 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 21:52:40.169 UTC: 	 Proxy valid for 11:16:57 hours
+DEBUG 2020-04-16 21:52:40.240 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 21:52:40.348 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:52:40.349 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 21:52:40.349 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 21:52:40.653 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 694:36:26  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 21:52:40.654 UTC: 	 Myproxy is valid: 2500586
+DEBUG 2020-04-16 21:52:40.655 UTC: 	 Command use: status
+DEBUG 2020-04-16 21:52:40.655 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-16 21:52:40.750 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 21:52:40.750 UTC: 	 Instance is prod
+DEBUG 2020-04-16 21:52:40.750 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 21:52:40.750 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 21:52:40.826 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-16 21:52:40.827 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-16 21:52:40.827 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 21:52:40.827 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-16 21:52:40.827 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-16 21:52:40.827 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 21:52:40.827 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 21:52:40.827 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-16 21:52:40.827 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-16 21:52:40.827 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 21:52:40.895 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 21:52:40.895 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-16 21:52:40.943 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [8.0, 308.0], 'StartTimes': [1587073449.0], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [708580], 'TotalUserCpuTimeHistory': [245.0], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [11.0]}}
+INFO 2020-04-16 21:52:40.943 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2020-04-16 21:52:40.943 UTC: 	 
+Jobs status:                    running      		100.0% (1/1)
+INFO 2020-04-16 21:52:40.943 UTC: 	 
+No publication information available yet
+INFO 2020-04-16 21:52:40.956 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-16 22:12:00.762 UTC: 	 Running on: Linux lxplus754.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 22:12:00.840 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 22:12:00.841 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-16 22:12:00.842 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 22:12:00.886 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:12:00.886 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:12:00.886 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:12:02.622 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 39455
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:12:03.956 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 39454
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:12:03.956 UTC: 	 Proxy lifetime 39455 secs is different from voms extension lifetime 39454 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 22:12:03.956 UTC: 	 Proxy valid for 10:57:34 hours
+DEBUG 2020-04-16 22:12:04.185 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:12:04.185 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:12:04.186 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:12:04.186 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:12:05.208 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 39452
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:12:06.229 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 39451
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:12:06.229 UTC: 	 Proxy lifetime 39452 secs is different from voms extension lifetime 39451 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 22:12:06.230 UTC: 	 Proxy valid for 10:57:31 hours
+DEBUG 2020-04-16 22:12:06.324 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 22:12:06.542 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:12:06.542 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 22:12:06.542 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 22:12:07.770 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 694:16:59  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:12:07.771 UTC: 	 Myproxy is valid: 2499419
+DEBUG 2020-04-16 22:12:07.773 UTC: 	 Command use: status
+DEBUG 2020-04-16 22:12:07.773 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-16 22:12:07.846 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 22:12:07.846 UTC: 	 Instance is prod
+DEBUG 2020-04-16 22:12:07.846 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 22:12:07.846 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 22:12:07.932 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-16 22:12:07.932 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-16 22:12:07.933 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 22:12:07.933 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-16 22:12:07.933 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-16 22:12:07.933 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:12:07.933 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:12:07.933 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-16 22:12:07.933 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-16 22:12:07.933 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:12:08.176 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:12:08.176 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-16 22:12:08.229 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [8.0, 1212.0], 'StartTimes': [1587073449.0], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [784312], 'TotalUserCpuTimeHistory': [1055.0], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [42.0]}}
+INFO 2020-04-16 22:12:08.229 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2020-04-16 22:12:08.229 UTC: 	 
+Jobs status:                    running      		100.0% (1/1)
+INFO 2020-04-16 22:12:08.229 UTC: 	 
+No publication information available yet
+INFO 2020-04-16 22:12:08.333 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-16 22:18:49.574 UTC: 	 Running on: Linux lxplus786.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 22:18:49.589 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 22:18:49.590 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-16 22:18:49.590 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 22:18:49.602 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:18:49.603 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:18:49.603 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:18:50.307 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43076
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:18:50.916 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43076
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:18:50.916 UTC: 	 Proxy valid for 11:57:56 hours
+DEBUG 2020-04-16 22:18:51.037 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:18:51.037 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:18:51.037 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:18:51.037 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:18:51.650 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43075
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:18:52.257 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43074
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:18:52.257 UTC: 	 Proxy lifetime 43075 secs is different from voms extension lifetime 43074 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 22:18:52.258 UTC: 	 Proxy valid for 11:57:54 hours
+DEBUG 2020-04-16 22:18:52.353 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 22:18:52.464 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:18:52.464 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 22:18:52.464 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 22:18:52.868 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 694:10:14  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:18:52.869 UTC: 	 Myproxy is valid: 2499014
+DEBUG 2020-04-16 22:18:52.870 UTC: 	 Command use: status
+DEBUG 2020-04-16 22:18:52.870 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-16 22:18:52.973 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 22:18:52.974 UTC: 	 Instance is prod
+DEBUG 2020-04-16 22:18:52.974 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 22:18:52.974 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 22:18:53.066 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-16 22:18:53.066 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-16 22:18:53.067 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 22:18:53.067 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-16 22:18:53.067 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-16 22:18:53.067 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:18:53.067 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:18:53.067 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-16 22:18:53.067 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-16 22:18:53.067 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:18:53.150 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:18:53.150 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-16 22:18:53.203 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [8.0, 1813.0], 'StartTimes': [1587073449.0], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [786080], 'TotalUserCpuTimeHistory': [1614.0], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [64.0]}}
+INFO 2020-04-16 22:18:53.203 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2020-04-16 22:18:53.203 UTC: 	 
+Jobs status:                    running      		100.0% (1/1)
+INFO 2020-04-16 22:18:53.203 UTC: 	 
+No publication information available yet
+INFO 2020-04-16 22:18:53.220 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-16 22:22:36.310 UTC: 	 Running on: Linux lxplus786.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 22:22:36.338 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 22:22:36.339 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-16 22:22:36.339 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 22:22:36.348 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:22:36.348 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:22:36.348 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:22:37.065 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42850
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:22:37.770 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42849
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:22:37.771 UTC: 	 Proxy lifetime 42850 secs is different from voms extension lifetime 42849 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 22:22:37.771 UTC: 	 Proxy valid for 11:54:09 hours
+DEBUG 2020-04-16 22:22:37.887 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:22:37.888 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:22:37.888 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:22:37.888 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:22:38.494 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42848
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:22:39.205 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42847
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:22:39.205 UTC: 	 Proxy lifetime 42848 secs is different from voms extension lifetime 42847 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 22:22:39.206 UTC: 	 Proxy valid for 11:54:07 hours
+DEBUG 2020-04-16 22:22:39.309 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 22:22:39.423 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:22:39.423 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 22:22:39.423 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 22:22:39.731 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 694:06:27  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:22:39.732 UTC: 	 Myproxy is valid: 2498787
+DEBUG 2020-04-16 22:22:39.733 UTC: 	 Command use: status
+DEBUG 2020-04-16 22:22:39.733 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-16 22:22:39.848 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 22:22:39.848 UTC: 	 Instance is prod
+DEBUG 2020-04-16 22:22:39.848 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 22:22:39.848 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 22:22:39.940 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-16 22:22:39.941 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-16 22:22:39.941 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 22:22:39.942 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-16 22:22:39.942 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-16 22:22:39.942 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:22:39.942 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:22:39.942 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-16 22:22:39.942 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-16 22:22:39.942 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:22:40.038 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:22:40.038 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-16 22:22:40.137 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [8.0, 2113.0], 'StartTimes': [1587073449.0], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [787784], 'TotalUserCpuTimeHistory': [1859.0], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [74.0]}}
+INFO 2020-04-16 22:22:40.137 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2020-04-16 22:22:40.137 UTC: 	 
+Jobs status:                    running      		100.0% (1/1)
+INFO 2020-04-16 22:22:40.138 UTC: 	 
+No publication information available yet
+INFO 2020-04-16 22:22:40.143 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-16 22:34:34.709 UTC: 	 Running on: Linux lxplus786.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 22:34:34.723 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 22:34:34.724 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-16 22:34:34.724 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 22:34:34.736 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:34:34.737 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:34:34.737 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:34:35.344 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42131
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:34:35.948 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42131
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:34:35.948 UTC: 	 Proxy valid for 11:42:11 hours
+DEBUG 2020-04-16 22:34:36.062 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:34:36.062 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:34:36.062 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:34:36.062 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:34:36.666 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 42130
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:34:37.271 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 42129
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:34:37.271 UTC: 	 Proxy lifetime 42130 secs is different from voms extension lifetime 42129 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 22:34:37.271 UTC: 	 Proxy valid for 11:42:09 hours
+DEBUG 2020-04-16 22:34:37.342 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 22:34:37.451 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:34:37.451 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 22:34:37.451 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 22:34:37.754 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 693:54:29  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:34:37.755 UTC: 	 Myproxy is valid: 2498069
+DEBUG 2020-04-16 22:34:37.756 UTC: 	 Command use: status
+DEBUG 2020-04-16 22:34:37.756 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-16 22:34:37.855 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 22:34:37.856 UTC: 	 Instance is prod
+DEBUG 2020-04-16 22:34:37.856 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 22:34:37.856 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 22:34:37.930 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-16 22:34:37.930 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-16 22:34:37.930 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 22:34:37.930 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-16 22:34:37.930 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-16 22:34:37.930 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:34:37.931 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:34:37.931 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-16 22:34:37.931 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-16 22:34:37.931 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:34:38.009 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:34:38.009 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-16 22:34:38.056 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [8.0, 2413.0], 'StartTimes': [1587073449.0], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [787784], 'TotalUserCpuTimeHistory': [2130.0], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [85.0]}}
+INFO 2020-04-16 22:34:38.056 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2020-04-16 22:34:38.056 UTC: 	 
+Jobs status:                    running      		100.0% (1/1)
+INFO 2020-04-16 22:34:38.056 UTC: 	 
+No publication information available yet
+INFO 2020-04-16 22:34:38.063 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-16 22:36:59.889 UTC: 	 Running on: Linux lxplus786.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-16 22:36:59.905 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-16 22:36:59.906 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-16 22:36:59.906 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-16 22:36:59.914 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:36:59.915 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:36:59.915 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:37:00.520 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41986
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:37:01.129 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 41985
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:37:01.130 UTC: 	 Proxy lifetime 41986 secs is different from voms extension lifetime 41985 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 22:37:01.130 UTC: 	 Proxy valid for 11:39:45 hours
+DEBUG 2020-04-16 22:37:01.244 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:37:01.244 UTC: 	 Checking credentials
+DEBUG 2020-04-16 22:37:01.244 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-16 22:37:01.244 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-16 22:37:01.849 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 41985
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:37:02.553 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 41984
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:37:02.553 UTC: 	 Proxy lifetime 41985 secs is different from voms extension lifetime 41984 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-16 22:37:02.553 UTC: 	 Proxy valid for 11:39:44 hours
+DEBUG 2020-04-16 22:37:02.662 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-16 22:37:02.772 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:37:02.772 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-16 22:37:02.772 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-16 22:37:03.076 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 693:52:03  (28.9 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-16 22:37:03.077 UTC: 	 Myproxy is valid: 2497923
+DEBUG 2020-04-16 22:37:03.078 UTC: 	 Command use: status
+DEBUG 2020-04-16 22:37:03.078 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-16 22:37:03.177 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-16 22:37:03.177 UTC: 	 Instance is prod
+DEBUG 2020-04-16 22:37:03.177 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-16 22:37:03.177 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-16 22:37:03.319 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-16 22:37:03.319 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-16 22:37:03.319 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-16 22:37:03.319 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-16 22:37:03.319 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-16 22:37:03.319 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:37:03.319 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-16 22:37:03.319 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-16 22:37:03.319 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-16 22:37:03.319 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:37:03.394 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-16 22:37:03.394 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-16 22:37:03.448 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [8.0, 2413.0], 'StartTimes': [1587073449.0], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [], 'Restarts': 0, 'RecordedSite': True, 'State': 'running', 'ResidentSetSize': [787784], 'TotalUserCpuTimeHistory': [2130.0], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [85.0]}}
+INFO 2020-04-16 22:37:03.448 UTC: 	 Status on the scheduler:	SUBMITTED
+INFO 2020-04-16 22:37:03.448 UTC: 	 
+Jobs status:                    running      		100.0% (1/1)
+INFO 2020-04-16 22:37:03.448 UTC: 	 
+No publication information available yet
+INFO 2020-04-16 22:37:03.455 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log
+DEBUG 2020-04-17 04:23:46.039 UTC: 	 Running on: Linux lxplus7107.cern.ch 3.10.0-1062.12.1.el7.x86_64 #1 SMP Tue Feb 4 23:02:59 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-17 04:23:46.059 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-17 04:23:46.060 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-17 04:23:46.061 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-17 04:23:46.074 UTC: 	 Checking credentials
+DEBUG 2020-04-17 04:23:46.074 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-17 04:23:46.074 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-17 04:23:46.780 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43180
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-17 04:23:47.487 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43179
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-17 04:23:47.487 UTC: 	 Proxy lifetime 43180 secs is different from voms extension lifetime 43179 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-17 04:23:47.487 UTC: 	 Proxy valid for 11:59:39 hours
+DEBUG 2020-04-17 04:23:47.602 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-17 04:23:47.602 UTC: 	 Checking credentials
+DEBUG 2020-04-17 04:23:47.602 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-17 04:23:47.602 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-17 04:23:48.308 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43178
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-17 04:23:49.015 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43178
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-17 04:23:49.015 UTC: 	 Proxy valid for 11:59:38 hours
+DEBUG 2020-04-17 04:23:49.196 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-17 04:23:49.307 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-17 04:23:49.307 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-17 04:23:49.307 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-17 04:23:50.916 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 688:05:16  (28.7 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-17 04:23:50.917 UTC: 	 Myproxy is valid: 2477116
+DEBUG 2020-04-17 04:23:50.918 UTC: 	 Command use: status
+DEBUG 2020-04-17 04:23:50.918 UTC: 	 Options use: ['crab_20200416_233733/']
+DEBUG 2020-04-17 04:23:51.356 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-17 04:23:51.356 UTC: 	 Instance is prod
+DEBUG 2020-04-17 04:23:51.356 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-17 04:23:51.356 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-17 04:23:51.452 UTC: 	 Got information from server oracle database: {u'result': [u'200416_213740:ccosby_crab_20200416_233733', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-16 21:37:40.745095', u'None', u'2020-04-16 21:38:30.691468', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'e3e53e44217f60e51dbe48be0b1bf0f65f4d650ee9992ce122020b01eaa9fcc8.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200416_233733-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmssrv623.fnal.gov:9620', u'crab3@vocms0196.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/newSample/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'4583f29366be5d6575168bad9e8f707c76a2f5fba8fd372666f72f72c2018c44.tar.gz', u'50885102', u'filetransfers', u'F', u'2001:1458:d00:13::3d7', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-17 04:23:51.452 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733
+INFO 2020-04-17 04:23:51.453 UTC: 	 Task name:			200416_213740:ccosby_crab_20200416_233733
+INFO 2020-04-17 04:23:51.453 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0196.cern.ch - crab-prod-tw01
+INFO 2020-04-17 04:23:51.453 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-17 04:23:51.453 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-17 04:23:51.453 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200416_213740%3Accosby_crab_20200416_233733
+INFO 2020-04-17 04:23:51.453 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-17 04:23:51.454 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 50885102)
+DEBUG 2020-04-17 04:23:51.454 UTC: 	 Webdir is located at http://vocms0196.cern.ch/mon/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-17 04:23:51.541 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733
+DEBUG 2020-04-17 04:23:51.541 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0196/cms1132/200416_213740:ccosby_crab_20200416_233733/status_cache
+DEBUG 2020-04-17 04:23:51.590 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [8.0, 11600.0], 'StartTimes': [1587073449.0], 'SubmitTimes': [1587073123.0], 'JobIds': ['50885104.0'], 'EndTimes': [1587085049.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [787784], 'TotalUserCpuTimeHistory': [10411], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [405]}}
+INFO 2020-04-17 04:23:51.590 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2020-04-17 04:23:51.590 UTC: 	 
+Jobs status:                    finished     		100.0% (1/1)
+INFO 2020-04-17 04:23:51.672 UTC: 	 
+No publication information available yet
+INFO 2020-04-17 04:23:51.672 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2020-04-17 04:23:51.672 UTC: 	 
+Summary of run jobs:
+ * Memory: 769MB min, 769MB max, 769MB ave
+ * Runtime: 3:13:20 min, 3:13:20 max, 3:13:20 ave
+ * CPU eff: 93% min, 93% max, 93% ave
+ * Waste: 0:00:08 (0% of total)
+
+INFO 2020-04-17 04:23:51.688 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200416_233733/crab.log

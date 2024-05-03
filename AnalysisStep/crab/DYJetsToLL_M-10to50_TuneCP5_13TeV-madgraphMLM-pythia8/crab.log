@@ -1,0 +1,44 @@
+DEBUG 2020-06-01 20:12:15.282 UTC: 	 CRAB Client version: 3.3.2005
+DEBUG 2020-06-01 20:12:15.282 UTC: 	 Running on: Linux lxplus781.cern.ch 3.10.0-1127.el7.x86_64 #1 SMP Tue Mar 31 23:36:51 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-06-01 20:12:15.298 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-06-01 20:12:15.298 UTC: 	 Executing command: 'status'
+DEBUG 2020-06-01 20:12:15.298 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+ERROR 2020-06-01 20:12:15.300 UTC: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/crab_20200601_212702
+ERROR 2020-06-01 20:12:15.300 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/bin/crab", line 165, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/bin/crab", line 150, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/lib/CRABClient/Commands/status.py", line 41, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/lib/CRABClient/Commands/SubCommand.py", line 278, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/lib/CRABClient/Commands/SubCommand.py", line 623, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/lib/CRABClient/Commands/SubCommand.py", line 485, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/crab_20200601_212702
+INFO 2020-06-01 20:12:15.304 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/crab.log
+DEBUG 2020-06-01 20:12:36.976 UTC: 	 CRAB Client version: 3.3.2005
+DEBUG 2020-06-01 20:12:36.977 UTC: 	 Running on: Linux lxplus781.cern.ch 3.10.0-1127.el7.x86_64 #1 SMP Tue Mar 31 23:36:51 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-06-01 20:12:36.993 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-06-01 20:12:36.993 UTC: 	 Executing command: 'status'
+DEBUG 2020-06-01 20:12:36.993 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+ERROR 2020-06-01 20:12:36.994 UTC: 	 Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/crab_20200601_221152
+ERROR 2020-06-01 20:12:36.995 UTC: 	 Caught ClientException exception
+Traceback (most recent call last):
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/bin/crab", line 165, in <module>
+    client()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/bin/crab", line 150, in __call__
+    self.cmd = sub_cmd(self.logger, args[1:])
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/lib/CRABClient/Commands/status.py", line 41, in __init__
+    SubCommand.__init__(self, logger, cmdargs)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/lib/CRABClient/Commands/SubCommand.py", line 278, in __init__
+    SubCommand.validateOptions(self)
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/lib/CRABClient/Commands/SubCommand.py", line 623, in validateOptions
+    self.loadLocalCache()
+  File "/cvmfs/cms.cern.ch/share/cms/crab-prod/3.3.2005-bcolbf2/lib/CRABClient/Commands/SubCommand.py", line 485, in loadLocalCache
+    raise ex
+CachefileNotFoundException: Cannot find .requestcache file in CRAB project directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/crab_20200601_221152
+INFO 2020-06-01 20:12:36.997 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/DYJetsToLL_M-10to50_TuneCP5_13TeV-madgraphMLM-pythia8/crab.log

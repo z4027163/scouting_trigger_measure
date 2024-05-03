@@ -1,0 +1,37 @@
+from CRABClient.UserUtilities import config
+config = config()
+
+#from DileptonAnalysis.AnalysisStep.samples.Samples import samples
+
+import os
+#dset = os.getcwd().replace(os.path.dirname(os.getcwd())+'/', '')
+
+#print 'Submitting jobs for dataset ' + samples[dset][0]
+
+params = ['isMC=True','useWeights=False','xsec=1.00','addEventInfo=True']
+print 'Config parameters for sample',
+#print dset + ' :',
+print params
+
+config.JobType.pluginName  = 'Analysis'
+config.JobType.psetName    = '../../test/tree_cfg.py'
+
+config.JobType.pyCfgParams = params
+#if dsetType == 0 : 
+#    config.JobType.scriptExe   = '../exec.sh'
+#    config.JobType.inputFiles  = ['../Rochester.tar.gz']
+
+config.Data.userInputFiles = open('./inputs.txt').readlines()
+config.Data.splitting      =  'FileBased'
+config.Data.unitsPerJob    =  10000
+config.Data.lumiMask   =  ''
+config.Data.outputPrimaryDataset = 'DarkPhoton2018'
+
+#config.Data.inputDBS   = 'phys03'
+config.Data.outLFNDirBase  =  '/store/user/ccosby/newSample/'
+config.Site.whitelist    =  ['T2_CH_CERN']
+config.Site.storageSite    = 'T2_CH_CERNBOX'
+
+config.JobType.allowUndistributedCMSSW = True
+
+

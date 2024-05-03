@@ -1,0 +1,422 @@
+DEBUG 2020-04-27 06:15:11.237 UTC: 	 Running on: Linux lxplus714.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-27 06:15:11.253 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-27 06:15:11.254 UTC: 	 Executing command: 'submit'
+DEBUG 2020-04-27 06:15:11.255 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-27 06:15:11.280 UTC: 	 Checking credentials
+DEBUG 2020-04-27 06:15:11.281 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-27 06:15:11.281 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-27 06:15:11.886 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43028
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 06:15:12.495 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43027
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 06:15:12.495 UTC: 	 Proxy lifetime 43028 secs is different from voms extension lifetime 43027 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-27 06:15:12.495 UTC: 	 Proxy valid for 11:57:07 hours
+INFO 2020-04-27 06:15:12.495 UTC: 	 Will use CRAB configuration file crabConfig.py
+DEBUG 2020-04-27 06:15:12.496 UTC: 	 Loading CRAB configuration file.
+DEBUG 2020-04-27 06:15:12.526 UTC: 	 Will use CRAB Analysis plugin (i.e. will run an analysis job type).
+DEBUG 2020-04-27 06:15:12.641 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 06:15:12.641 UTC: 	 Checking credentials
+DEBUG 2020-04-27 06:15:12.641 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-27 06:15:12.641 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-27 06:15:13.247 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43026
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 06:15:13.852 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43026
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 06:15:13.853 UTC: 	 Proxy valid for 11:57:06 hours
+DEBUG 2020-04-27 06:15:14.457 UTC: 	 Executing : 
+ command : env X509_USER_PROXY=/tmp/x509up_u119364 voms-proxy-info -fqan
+ output : /cms/Role=NULL/Capability=NULL
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 06:15:14.535 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-27 06:15:14.646 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 06:15:14.646 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-27 06:15:14.646 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-27 06:15:14.851 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 446:13:52  (18.6 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 06:15:14.852 UTC: 	 Myproxy is valid: 1606432
+DEBUG 2020-04-27 06:15:14.852 UTC: 	 Command use: submit
+DEBUG 2020-04-27 06:15:14.852 UTC: 	 Options use: ['crabConfig.py']
+DEBUG 2020-04-27 06:15:14.959 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-27 06:15:14.959 UTC: 	 Instance is prod
+DEBUG 2020-04-27 06:15:14.959 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-27 06:15:14.959 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-27 06:15:14.959 UTC: 	 Started submission
+DEBUG 2020-04-27 06:15:14.959 UTC: 	 Working on /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512
+DEBUG 2020-04-27 06:15:15.066 UTC: 	 Loading required information from the environment
+DEBUG 2020-04-27 06:15:15.066 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-04-27 06:15:15.066 UTC: 	 Loading required information from the environment
+DEBUG 2020-04-27 06:15:15.066 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-04-27 06:15:15.080 UTC: 	 UNIQUE NAME: tarUUID 59b2f6a5-601a-412a-967b-71b1c9511654 
+DEBUG 2020-04-27 06:15:15.080 UTC: 	 self.config: from WMCore.Configuration import Configuration
+config = Configuration()
+config.section_('General')
+config.section_('JobType')
+config.JobType.psetName = '../../test/tree_cfg.py'
+config.JobType.pluginName = 'Analysis'
+config.JobType.pyCfgParams = ['isMC=True', 'useWeights=False', 'xsec=1.00', 'addEventInfo=True']
+config.JobType.allowUndistributedCMSSW = True
+config.section_('Data')
+config.Data.unitsPerJob = 10000
+config.Data.userInputFiles = ['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root\n', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root\n']
+config.Data.splitting = 'FileBased'
+config.Data.lumiMask = ''
+config.Data.outLFNDirBase = '/store/user/ccosby/'
+config.Data.outputPrimaryDataset = 'DarkPhoton2018'
+config.section_('Site')
+config.Site.whitelist = ['T2_CH_CERN']
+config.Site.storageSite = 'T2_CH_CERNBOX'
+config.section_('User')
+config.section_('Debug')
+
+DEBUG 2020-04-27 06:15:15.080 UTC: 	 self.config.JobType.psetName: ../../test/tree_cfg.py
+INFO 2020-04-27 06:15:15.081 UTC: 	 Importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2020-04-27 06:15:15.081 UTC: 	 Additional parameters for the CMSSW configuration are: ['isMC=True', 'useWeights=False', 'xsec=1.00', 'addEventInfo=True']
+INFO 2020-04-27 06:15:15.971 UTC: 	 Finished importing CMSSW configuration ../../test/tree_cfg.py
+DEBUG 2020-04-27 06:15:15.972 UTC: 	 Writing CMSSW configuration to /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/inputs/PSet.py
+DEBUG 2020-04-27 06:15:16.015 UTC: 	 The following EDM output files will be collected: []
+DEBUG 2020-04-27 06:15:16.015 UTC: 	 The following TFile output files will be collected: ['tree.root']
+DEBUG 2020-04-27 06:15:16.015 UTC: 	 The following user output files (not listed as PoolOuputModule or TFileService in the CMSSW PSet) will be collected: 
+DEBUG 2020-04-27 06:15:16.015 UTC: 	 Loading required information from the environment
+DEBUG 2020-04-27 06:15:16.015 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-04-27 06:15:16.015 UTC: 	 Making tarball in /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/inputs/59b2f6a5-601a-412a-967b-71b1c9511654default.tgz
+DEBUG 2020-04-27 06:15:16.016 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/lib
+DEBUG 2020-04-27 06:15:16.016 UTC: 	 Adding directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/lib to tarball
+DEBUG 2020-04-27 06:15:16.039 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/biglib
+DEBUG 2020-04-27 06:15:16.039 UTC: 	 Adding directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/biglib to tarball
+DEBUG 2020-04-27 06:15:16.040 UTC: 	 Checking directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/module
+DEBUG 2020-04-27 06:15:16.848 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/data to tarball
+DEBUG 2020-04-27 06:15:17.759 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/interface to tarball
+DEBUG 2020-04-27 06:15:18.572 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/chrisDileptonAnalysis/DileptonAnalysis/AnalysisStep/data to tarball
+DEBUG 2020-04-27 06:15:19.319 UTC: 	 Adding data directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/chrisDileptonAnalysis/DileptonAnalysis/AnalysisStep/interface to tarball
+DEBUG 2020-04-27 06:15:19.485 UTC: 	 Uploading archive /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/inputs/59b2f6a5-601a-412a-967b-71b1c9511654default.tgz (1.925781.1 MB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2020-04-27 06:15:21.703 UTC: 	 Loading required information from the environment
+DEBUG 2020-04-27 06:15:21.704 UTC: 	 Found CMSSW_10_2_3 for slc7_amd64_gcc700 with base /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3
+DEBUG 2020-04-27 06:15:21.704 UTC: 	 Making tarball in /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/inputs/debugFiles.tgz
+DEBUG 2020-04-27 06:15:21.736 UTC: 	 Uploading archive /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/inputs/debugFiles.tgz (4 KB) to the CRAB cache. Using URI https://cmsweb.cern.ch/crabcache
+DEBUG 2020-04-27 06:15:21.800 UTC: 	 Result uploading input files: 2fadd71ecddbbae47c1975676507862201388703f85fac5b5c92d71d045f0796.tar.gz 
+DEBUG 2020-04-27 06:15:21.800 UTC: 	 Attaching list of user-specified primary input files.
+WARNING 2020-04-27 06:15:21.800 UTC: 	 Warning: CRAB configuration parameter Data.userInputFiles contains duplicated entries. Duplicated entries will be removed.
+WARNING 2020-04-27 06:15:21.800 UTC: 	 Warning: The following output files will not be published, as they are not EDM files: ['tree.root']
+INFO 2020-04-27 06:15:21.801 UTC: 	 Sending the request to the server at cmsweb.cern.ch
+DEBUG 2020-04-27 06:15:21.801 UTC: 	 Submitting {'maxjobruntime': 1250, 'extrajdl': [], 'ignorelocality': 0, 'savelogsflag': 0, 'useparent': 0, 'asyncdest': 'T2_CH_CERNBOX', 'algoargs': 10000, 'cachefilename': '2fadd71ecddbbae47c1975676507862201388703f85fac5b5c92d71d045f0796.tar.gz', 'numcores': 1, 'addoutputfiles': [], 'generator': 'pythia', 'maxmemory': 2000, 'publishdbsurl': 'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', 'priority': 10, 'jobsw': 'CMSSW_10_2_3', 'edmoutfiles': [], 'userfiles': set(['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']), 'primarydataset': 'DarkPhoton2018', 'inputdata': '', 'lfn': '/store/user/ccosby/', 'dryrun': 0, 'workflow': 'crab_20200427_081512', 'sitewhitelist': ['T2_CH_CERN'], 'nonprodsw': 1, 'tfileoutfiles': ['tree.root'], 'oneEventMode': 0, 'debugfilename': 'ea475fea8e67dfb540c210cfd5e37e115e05126edf9fd0efd723c029f1ea1878.tar.gz', 'cacheurl': u'https://cmsweb.cern.ch/crabcache', 'saveoutput': 1, 'publication': 1, 'jobarch': 'slc7_amd64_gcc700', 'totalunits': 0, 'splitalgo': 'FileBased', 'ignoreglobalblacklist': 0, 'nonvaliddata': 0, 'dbsurl': 'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', 'publishgroupname': 0, 'jobtype': 'Analysis', 'publishname2': ''} 
+DEBUG 2020-04-27 06:15:21.801 UTC: 	 Encoded submit request: maxjobruntime=1250&ignorelocality=0&savelogsflag=0&useparent=0&asyncdest=T2_CH_CERNBOX&algoargs=10000&cachefilename=2fadd71ecddbbae47c1975676507862201388703f85fac5b5c92d71d045f0796.tar.gz&numcores=1&generator=pythia&maxmemory=2000&publishdbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fphys03%2FDBSWriter&priority=10&jobsw=CMSSW_10_2_3&primarydataset=DarkPhoton2018&inputdata=&lfn=%2Fstore%2Fuser%2Fccosby%2F&dryrun=0&workflow=crab_20200427_081512&nonprodsw=1&oneEventMode=0&debugfilename=ea475fea8e67dfb540c210cfd5e37e115e05126edf9fd0efd723c029f1ea1878.tar.gz&cacheurl=https%3A%2F%2Fcmsweb.cern.ch%2Fcrabcache&saveoutput=1&publication=1&jobarch=slc7_amd64_gcc700&totalunits=0&splitalgo=FileBased&ignoreglobalblacklist=0&nonvaliddata=0&dbsurl=https%3A%2F%2Fcmsweb.cern.ch%2Fdbs%2Fprod%2Fglobal%2FDBSReader&publishgroupname=0&jobtype=Analysis&publishname2=&sitewhitelist=T2_CH_CERN&tfileoutfiles=tree.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root&userfiles=root%3A//eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root
+DEBUG 2020-04-27 06:15:21.888 UTC: 	 Result: {u'result': [{u'RequestName': u'200427_061521:ccosby_crab_20200427_081512'}]}
+INFO 2020-04-27 06:15:21.891 UTC: 	 Success: Your task has been delivered to the prod CRAB3 server.
+INFO 2020-04-27 06:15:21.891 UTC: 	 Task name: 200427_061521:ccosby_crab_20200427_081512
+INFO 2020-04-27 06:15:21.891 UTC: 	 Project dir: ./crab_20200427_081512
+INFO 2020-04-27 06:15:21.891 UTC: 	 Please use 'crab status -d ./crab_20200427_081512' to check how the submission process proceeds.
+DEBUG 2020-04-27 06:15:21.891 UTC: 	 About to return
+INFO 2020-04-27 06:15:21.894 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/crab.log
+DEBUG 2020-04-27 17:29:44.536 UTC: 	 Running on: Linux lxplus787.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-27 17:29:44.549 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-27 17:29:44.550 UTC: 	 Executing command: 'report'
+DEBUG 2020-04-27 17:29:44.550 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-27 17:29:44.559 UTC: 	 Checking credentials
+DEBUG 2020-04-27 17:29:44.560 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-27 17:29:44.560 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-27 17:29:45.164 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43165
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:45.670 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43164
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:45.670 UTC: 	 Proxy lifetime 43165 secs is different from voms extension lifetime 43164 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-27 17:29:45.670 UTC: 	 Proxy valid for 11:59:24 hours
+DEBUG 2020-04-27 17:29:45.781 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:45.781 UTC: 	 Checking credentials
+DEBUG 2020-04-27 17:29:45.782 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-27 17:29:45.782 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-27 17:29:46.387 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43164
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:46.992 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43163
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:46.992 UTC: 	 Proxy lifetime 43164 secs is different from voms extension lifetime 43163 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-27 17:29:46.992 UTC: 	 Proxy valid for 11:59:23 hours
+DEBUG 2020-04-27 17:29:47.063 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-27 17:29:47.173 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:47.173 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-27 17:29:47.173 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-27 17:29:47.879 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 434:59:19  (18.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:47.880 UTC: 	 Myproxy is valid: 1565959
+DEBUG 2020-04-27 17:29:47.881 UTC: 	 Command use: report
+DEBUG 2020-04-27 17:29:47.881 UTC: 	 Options use: ['crab_20200427_081512/']
+DEBUG 2020-04-27 17:29:47.961 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-27 17:29:47.961 UTC: 	 Instance is prod
+DEBUG 2020-04-27 17:29:47.961 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-27 17:29:47.961 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-27 17:29:47.961 UTC: 	 Looking up report for task 200427_061521:ccosby_crab_20200427_081512
+DEBUG 2020-04-27 17:29:48.038 UTC: 	 Result: {u'result': [{u'runsAndLumis': {u'1': [{u'parents': u'[]', u'runlumi': u'{}', u'type': u'TFILE', u'events': 0, u'lfn': u'/store/user/ccosby/DarkPhoton2018/crab_20200427_081512/200427_061521/0000/tree_1.root'}, {u'parents': u'[]', u'runlumi': u"{'1': {'23990': 'None', '23448': 'None', '23449': 'None', '22669': 'None', '22668': 'None', '22665': 'None', '22664': 'None', '22667': 'None', '22666': 'None', '22661': 'None', '22660': 'None', '22663': 'None', '22662': 'None', '23451': 'None', '23742': 'None', '23846': 'None', '23847': 'None', '23844': 'None', '23845': 'None', '23842': 'None', '23843': 'None', '23840': 'None', '23841': 'None', '23848': 'None', '23849': 'None', '22715': 'None', '22714': 'None', '22717': 'None', '22716': 'None', '22711': 'None', '22710': 'None', '22713': 'None', '22712': 'None', '22719': 'None', '22718': 'None', '23441': 'None', '23446': 'None', '23447': 'None', '23444': 'None', '23445': 'None', '22908': 'None', '22909': 'None', '22900': 'None', '22901': 'None', '22902': 'None', '22903': 'None', '22904': 'None', '22905': 'None', '22906': 'None', '22907': 'None', '22874': 'None', '22875': 'None', '22876': 'None', '22877': 'None', '22870': 'None', '22871': 'None', '22872': 'None', '22873': 'None', '22878': 'None', '22879': 'None', '23059': 'None', '23058': 'None', '23509': 'None', '23508': 'None', '23055': 'None', '23054': 'None', '23057': 'None', '23056': 'None', '23051': 'None', '23050': 'None', '23053': 'None', '23052': 'None', '23619': 'None', '23618': 'None', '23613': 'None', '23612': 'None', '23611': 'None', '23610': 'None', '23617': 'None', '23616': 'None', '23615': 'None', '23614': 'None', '23657': 'None', '23299': 'None', '23298': 'None', '23297': 'None', '23296': 'None', '23295': 'None', '23294': 'None', '23293': 'None', '23292': 'None', '23291': 'None', '23290': 'None', '23477': 'None', '23476': 'None', '23475': 'None', '23474': 'None', '23473': 'None', '23472': 'None', '23471': 'None', '23470': 'None', '23653': 'None', '23479': 'None', '23478': 'None', '23275': 'None', '23274': 'None', '23277': 'None', '23276': 'None', '23271': 'None', '23270': 'None', '22678': 'None', '22679': 'None', '22676': 'None', '22677': 'None', '22674': 'None', '22675': 'None', '22672': 'None', '22673': 'None', '22670': 'None', '22671': 'None', '23873': 'None', '23872': 'None', '23871': 'None', '23870': 'None', '23877': 'None', '23876': 'None', '23875': 'None', '23874': 'None', '23879': 'None', '23878': 'None', '22706': 'None', '22707': 'None', '22704': 'None', '22705': 'None', '22702': 'None', '22703': 'None', '22700': 'None', '22701': 'None', '22708': 'None', '22709': 'None', '23830': 'None', '22801': 'None', '22800': 'None', '22803': 'None', '22802': 'None', '22805': 'None', '22804': 'None', '22807': 'None', '22806': 'None', '22809': 'None', '22808': 'None', '23882': 'None', '23883': 'None', '23332': 'None', '23333': 'None', '23334': 'None', '23887': 'None', '23336': 'None', '23885': 'None', '23518': 'None', '23519': 'None', '23048': 'None', '23049': 'None', '23046': 'None', '23047': 'None', '23044': 'None', '23513': 'None', '23042': 'None', '23043': 'None', '23040': 'None', '23517': 'None', '23723': 'None', '23722': 'None', '23233': 'None', '23232': 'None', '23235': 'None', '23234': 'None', '23237': 'None', '23989': 'None', '23236': 'None', '23604': 'None', '23605': 'None', '23606': 'None', '23607': 'None', '23600': 'None', '23601': 'None', '23602': 'None', '23603': 'None', '23608': 'None', '23609': 'None', '23656': 'None', '23288': 'None', '23289': 'None', '23280': 'None', '23281': 'None', '23282': 'None', '23283': 'None', '23284': 'None', '23285': 'None', '23286': 'None', '23287': 'None', '23460': 'None', '23461': 'None', '23462': 'None', '23463': 'None', '23464': 'None', '23465': 'None', '23466': 'None', '23467': 'None', '23468': 'None', '23469': 'None', '23655': 'None', '23266': 'None', '23267': 'None', '22649': 'None', '22648': 'None', '23262': 'None', '23263': 'None', '23260': 'None', '23261': 'None', '22643': 'None', '22642': 'None', '22641': 'None', '22640': 'None', '22647': 'None', '22646': 'None', '22645': 'None', '22644': 'None', '23654': 'None', '22541': 'None', '23652': 'None', '23869': 'None', '23864': 'None', '23865': 'None', '23866': 'None', '23867': 'None', '23860': 'None', '23861': 'None', '23862': 'None', '23863': 'None', '23651': 'None', '22733': 'None', '22732': 'None', '22731': 'None', '22730': 'None', '22737': 'None', '22736': 'None', '22735': 'None', '22734': 'None', '22739': 'None', '22738': 'None', '23650': 'None', '22589': 'None', '23837': 'None', '23344': 'None', '23347': 'None', '23834': 'None', '22683': 'None', '22682': 'None', '22528': 'None', '23342': 'None', '22812': 'None', '22813': 'None', '22810': 'None', '22811': 'None', '22816': 'None', '22817': 'None', '22814': 'None', '22815': 'None', '22818': 'None', '22819': 'None', '22689': 'None', '22688': 'None', '23079': 'None', '23078': 'None', '23073': 'None', '23072': 'None', '23071': 'None', '23070': 'None', '23077': 'None', '23076': 'None', '23075': 'None', '23074': 'None', '23639': 'None', '23671': 'None', '23670': 'None', '23673': 'None', '23672': 'None', '23675': 'None', '23674': 'None', '23677': 'None', '23676': 'None', '23679': 'None', '23678': 'None', '22654': 'None', '22655': 'None', '22656': 'None', '22657': 'None', '22650': 'None', '22651': 'None', '22652': 'None', '22653': 'None', '23495': 'None', '23494': 'None', '23497': 'None', '23496': 'None', '23491': 'None', '23490': 'None', '23493': 'None', '23492': 'None', '23253': 'None', '23252': 'None', '23251': 'None', '23250': 'None', '23257': 'None', '23256': 'None', '23255': 'None', '23254': 'None', '23705': 'None', '23704': 'None', '23707': 'None', '23706': 'None', '23701': 'None', '23700': 'None', '23703': 'None', '22978': 'None', '23381': 'None', '23380': 'None', '23383': 'None', '23382': 'None', '23385': 'None', '23384': 'None', '23387': 'None', '23386': 'None', '23389': 'None', '23388': 'None', '22976': 'None', '23741': 'None', '23819': 'None', '23818': 'None', '23740': 'None', '23811': 'None', '23810': 'None', '23813': 'None', '23812': 'None', '23815': 'None', '23814': 'None', '23817': 'None', '23816': 'None', '22728': 'None', '22729': 'None', '22724': 'None', '22725': 'None', '22726': 'None', '22727': 'None', '22720': 'None', '22721': 'None', '22722': 'None', '22723': 'None', '23925': 'None', '23924': 'None', '23927': 'None', '23926': 'None', '23921': 'None', '23920': 'None', '23923': 'None', '23922': 'None', '23929': 'None', '23928': 'None', '23579': 'None', '23573': 'None', '23259': 'None', '23356': 'None', '22829': 'None', '22828': 'None', '22827': 'None', '22826': 'None', '22825': 'None', '22824': 'None', '22823': 'None', '22822': 'None', '22821': 'None', '22820': 'None', '23748': 'None', '23177': 'None', '23178': 'None', '23179': 'None', '23186': 'None', '23499': 'None', '23498': 'None', '23662': 'None', '23663': 'None', '23660': 'None', '23661': 'None', '23666': 'None', '23667': 'None', '23664': 'None', '23665': 'None', '22658': 'None', '23668': 'None', '23669': 'None', '22659': 'None', '23064': 'None', '23065': 'None', '23066': 'None', '23067': 'None', '23060': 'None', '23061': 'None', '23062': 'None', '23063': 'None', '23709': 'None', '23068': 'None', '23069': 'None', '23708': 'None', '22621': 'None', '22620': 'None', '22623': 'None', '22622': 'None', '22625': 'None', '22624': 'None', '22627': 'None', '22626': 'None', '23486': 'None', '22628': 'None', '23484': 'None', '23485': 'None', '23482': 'None', '23483': 'None', '23480': 'None', '23481': 'None', '23248': 'None', '23249': 'None', '23718': 'None', '23719': 'None', '23244': 'None', '23245': 'None', '23246': 'None', '23247': 'None', '23712': 'None', '23241': 'None', '23242': 'None', '23243': 'None', '23258': 'None', '23392': 'None', '23393': 'None', '23390': 'None', '23391': 'None', '23396': 'None', '23397': 'None', '23394': 'None', '23395': 'None', '23398': 'None', '23399': 'None', '22539': 'None', '22538': 'None', '22535': 'None', '22534': 'None', '22537': 'None', '22536': 'None', '22531': 'None', '22530': 'None', '22533': 'None', '22532': 'None', '23808': 'None', '23809': 'None', '23802': 'None', '23803': 'None', '23800': 'None', '23801': 'None', '23806': 'None', '23807': 'None', '23804': 'None', '23805': 'None', '22759': 'None', '22758': 'None', '22751': 'None', '22750': 'None', '22753': 'None', '22752': 'None', '22755': 'None', '22754': 'None', '22757': 'None', '22756': 'None', '23936': 'None', '23937': 'None', '23934': 'None', '23935': 'None', '23932': 'None', '23933': 'None', '23930': 'None', '23931': 'None', '23938': 'None', '23939': 'None', '22838': 'None', '22839': 'None', '22830': 'None', '22831': 'None', '22832': 'None', '22833': 'None', '22834': 'None', '22835': 'None', '22836': 'None', '22837': 'None', '23950': 'None', '23951': 'None', '23952': 'None', '23953': 'None', '23954': 'None', '23955': 'None', '23400': 'None', '23401': 'None', '23507': 'None', '23506': 'None', '23505': 'None', '23504': 'None', '23503': 'None', '23502': 'None', '23501': 'None', '23340': 'None', '23500': 'None', '23343': 'None', '23129': 'None', '23128': 'None', '23659': 'None', '23658': 'None', '23125': 'None', '23124': 'None', '23127': 'None', '23126': 'None', '23121': 'None', '23120': 'None', '23123': 'None', '23122': 'None', '23488': 'None', '23011': 'None', '23010': 'None', '23013': 'None', '23012': 'None', '23015': 'None', '23014': 'None', '23017': 'None', '23016': 'None', '23019': 'None', '23018': 'None', '22632': 'None', '22633': 'None', '22630': 'None', '22631': 'None', '22636': 'None', '22637': 'None', '22634': 'None', '22635': 'None', '22638': 'None', '22639': 'None', '23239': 'None', '23238': 'None', '23729': 'None', '23728': 'None', '23231': 'None', '23230': 'None', '23721': 'None', '23720': 'None', '23727': 'None', '23726': 'None', '23725': 'None', '23724': 'None', '23345': 'None', '23836': 'None', '23835': 'None', '23346': 'None', '23341': 'None', '23832': 'None', '23831': 'None', '22529': 'None', '23349': 'None', '23348': 'None', '23839': 'None', '23838': 'None', '22748': 'None', '22749': 'None', '22742': 'None', '22743': 'None', '22740': 'None', '22741': 'None', '22746': 'None', '22747': 'None', '22744': 'None', '22745': 'None', '23903': 'None', '23902': 'None', '23901': 'None', '23900': 'None', '23907': 'None', '23906': 'None', '23905': 'None', '23904': 'None', '23909': 'None', '23908': 'None', '23200': 'None', '23753': 'None', '23750': 'None', '23203': 'None', '23204': 'None', '23205': 'None', '23206': 'None', '23207': 'None', '22997': 'None', '22996': 'None', '22995': 'None', '22994': 'None', '22993': 'None', '22992': 'None', '22991': 'None', '22990': 'None', '22999': 'None', '22998': 'None', '23279': 'None', '22629': 'None', '23648': 'None', '23649': 'None', '23138': 'None', '23139': 'None', '23640': 'None', '23641': 'None', '23642': 'None', '23643': 'None', '23644': 'None', '23645': 'None', '23646': 'None', '23647': 'None', '23002': 'None', '23003': 'None', '23000': 'None', '23001': 'None', '23006': 'None', '23007': 'None', '23004': 'None', '23005': 'None', '23008': 'None', '23009': 'None', '23734': 'None', '23735': 'None', '23736': 'None', '23737': 'None', '23730': 'None', '23731': 'None', '23732': 'None', '22608': 'None', '22607': 'None', '22606': 'None', '22605': 'None', '22604': 'None', '22603': 'None', '22602': 'None', '22601': 'None', '22600': 'None', '23228': 'None', '23229': 'None', '23222': 'None', '23223': 'None', '23220': 'None', '23221': 'None', '23226': 'None', '23227': 'None', '23224': 'None', '23225': 'None', '23820': 'None', '23821': 'None', '23354': 'None', '23355': 'None', '23824': 'None', '23353': 'None', '23826': 'None', '23827': 'None', '23828': 'None', '23829': 'None', '23358': 'None', '23359': 'None', '22777': 'None', '22776': 'None', '22775': 'None', '22774': 'None', '22773': 'None', '23273': 'None', '22771': 'None', '22770': 'None', '23272': 'None', '22779': 'None', '22778': 'None', '23918': 'None', '23919': 'None', '23914': 'None', '23915': 'None', '23916': 'None', '23917': 'None', '23910': 'None', '23911': 'None', '23912': 'None', '23278': 'None', '22980': 'None', '22981': 'None', '22982': 'None', '22983': 'None', '22984': 'None', '22985': 'None', '22986': 'None', '22987': 'None', '22988': 'None', '22989': 'None', '23109': 'None', '23108': 'None', '23103': 'None', '23102': 'None', '23101': 'None', '23100': 'None', '23107': 'None', '23106': 'None', '23105': 'None', '23104': 'None', '23136': 'None', '23039': 'None', '23137': 'None', '23037': 'None', '23036': 'None', '23035': 'None', '23034': 'None', '23033': 'None', '23134': 'None', '23031': 'None', '23030': 'None', '23217': 'None', '23216': 'None', '23743': 'None', '23135': 'None', '23213': 'None', '23212': 'None', '23747': 'None', '23746': 'None', '22610': 'None', '23132': 'None', '22612': 'None', '22613': 'None', '22614': 'None', '22615': 'None', '23219': 'None', '23133': 'None', '23587': 'None', '23586': 'None', '23585': 'None', '23584': 'None', '23583': 'None', '23130': 'None', '23581': 'None', '23580': 'None', '23131': 'None', '23589': 'None', '23588': 'None', '23363': 'None', '23362': 'None', '23361': 'None', '23360': 'None', '23367': 'None', '23366': 'None', '23365': 'None', '23364': 'None', '23369': 'None', '23368': 'None', '23693': 'None', '23692': 'None', '23691': 'None', '23690': 'None', '23697': 'None', '23696': 'None', '23695': 'None', '23694': 'None', '23699': 'None', '23698': 'None', '22760': 'None', '22761': 'None', '22762': 'None', '22763': 'None', '22764': 'None', '22765': 'None', '22766': 'None', '22767': 'None', '22768': 'None', '22769': 'None', '23969': 'None', '23968': 'None', '23961': 'None', '23960': 'None', '23963': 'None', '23962': 'None', '23965': 'None', '23964': 'None', '23967': 'None', '23966': 'None', '22979': 'None', '22609': 'None', '22975': 'None', '22974': 'None', '22977': 'None', '23733': 'None', '22971': 'None', '22970': 'None', '22973': 'None', '22972': 'None', '23738': 'None', '23739': 'None', '22889': 'None', '22888': 'None', '22881': 'None', '22880': 'None', '22883': 'None', '22882': 'None', '22885': 'None', '22884': 'None', '22887': 'None', '22886': 'None', '23637': 'None', '23188': 'None', '23028': 'None', '23029': 'None', '23020': 'None', '23021': 'None', '23022': 'None', '23023': 'None', '23024': 'None', '23025': 'None', '23026': 'None', '23027': 'None', '23752': 'None', '23201': 'None', '23202': 'None', '23751': 'None', '23756': 'None', '23757': 'None', '23754': 'None', '23755': 'None', '23208': 'None', '23209': 'None', '23758': 'None', '23759': 'None', '23590': 'None', '23591': 'None', '23592': 'None', '23593': 'None', '23594': 'None', '23595': 'None', '23596': 'None', '23597': 'None', '23598': 'None', '23599': 'None', '23114': 'None', '23115': 'None', '23116': 'None', '23117': 'None', '23110': 'None', '23111': 'None', '23112': 'None', '23113': 'None', '23118': 'None', '23119': 'None', '22571': 'None', '22570': 'None', '22573': 'None', '22572': 'None', '22575': 'None', '22574': 'None', '22577': 'None', '22576': 'None', '22579': 'None', '22578': 'None', '23378': 'None', '23379': 'None', '23374': 'None', '23375': 'None', '23376': 'None', '23377': 'None', '23370': 'None', '23371': 'None', '23372': 'None', '23373': 'None', '23688': 'None', '23689': 'None', '23684': 'None', '23685': 'None', '23686': 'None', '23687': 'None', '23680': 'None', '23681': 'None', '23682': 'None', '23683': 'None', '22799': 'None', '22798': 'None', '22795': 'None', '22794': 'None', '22797': 'None', '22796': 'None', '22791': 'None', '22790': 'None', '22793': 'None', '22792': 'None', '23978': 'None', '23979': 'None', '23972': 'None', '23973': 'None', '23970': 'None', '23971': 'None', '23976': 'None', '23977': 'None', '23974': 'None', '23975': 'None', '23459': 'None', '23357': 'None', '23822': 'None', '23823': 'None', '23352': 'None', '23825': 'None', '23350': 'None', '23351': 'None', '22698': 'None', '23982': 'None', '23453': 'None', '23452': 'None', '23455': 'None', '23454': 'None', '23457': 'None', '23456': 'None', '22968': 'None', '22969': 'None', '22966': 'None', '22967': 'None', '22964': 'None', '22965': 'None', '22962': 'None', '22963': 'None', '22960': 'None', '22961': 'None', '22898': 'None', '22899': 'None', '22892': 'None', '22893': 'None', '22890': 'None', '22891': 'None', '22896': 'None', '22897': 'None', '22894': 'None', '22895': 'None', '22772': 'None', '23769': 'None', '23768': 'None', '23767': 'None', '23766': 'None', '23765': 'None', '23764': 'None', '23763': 'None', '23762': 'None', '23761': 'None', '23760': 'None', '23569': 'None', '23568': 'None', '23565': 'None', '23564': 'None', '23567': 'None', '23566': 'None', '23561': 'None', '23560': 'None', '23563': 'None', '23562': 'None', '23161': 'None', '23160': 'None', '23163': 'None', '23162': 'None', '23165': 'None', '23164': 'None', '23167': 'None', '23166': 'None', '23169': 'None', '23168': 'None', '22562': 'None', '22563': 'None', '22560': 'None', '22561': 'None', '22566': 'None', '22567': 'None', '22564': 'None', '22565': 'None', '22568': 'None', '22569': 'None', '23309': 'None', '23308': 'None', '23301': 'None', '23300': 'None', '23303': 'None', '23302': 'None', '23305': 'None', '23304': 'None', '23307': 'None', '23306': 'None', '22788': 'None', '22789': 'None', '22786': 'None', '22787': 'None', '22784': 'None', '22785': 'None', '22782': 'None', '22783': 'None', '22780': 'None', '22781': 'None', '23415': 'None', '23414': 'None', '23417': 'None', '23416': 'None', '23411': 'None', '23410': 'None', '23413': 'None', '23412': 'None', '23851': 'None', '23419': 'None', '23418': 'None', '23949': 'None', '23948': 'None', '23785': 'None', '23784': 'None', '23787': 'None', '23786': 'None', '23781': 'None', '23780': 'None', '23783': 'None', '23782': 'None', '23789': 'None', '23788': 'None', '23859': 'None', '23858': 'None', '23091': 'None', '23542': 'None', '23913': 'None', '23093': 'None', '23092': 'None', '23095': 'None', '23094': 'None', '23097': 'None', '23096': 'None', '22959': 'None', '22958': 'None', '22953': 'None', '22952': 'None', '22951': 'None', '22950': 'None', '22957': 'None', '22956': 'None', '22955': 'None', '22954': 'None', '23891': 'None', '23890': 'None', '23325': 'None', '23324': 'None', '23895': 'None', '23322': 'None', '23321': 'None', '23489': 'None', '22540': 'None', '23487': 'None', '23329': 'None', '23328': 'None', '23778': 'None', '23779': 'None', '23770': 'None', '23771': 'None', '23772': 'None', '23773': 'None', '23774': 'None', '23775': 'None', '23776': 'None', '23777': 'None', '23716': 'None', '23578': 'None', '23717': 'None', '23576': 'None', '23577': 'None', '23574': 'None', '23575': 'None', '23572': 'None', '23714': 'None', '23570': 'None', '23571': 'None', '23715': 'None', '23240': 'None', '23713': 'None', '23172': 'None', '23173': 'None', '23170': 'None', '23171': 'None', '23176': 'None', '23710': 'None', '23174': 'None', '23175': 'None', '23833': 'None', '23711': 'None', '22559': 'None', '22558': 'None', '22557': 'None', '22556': 'None', '22555': 'None', '22554': 'None', '22553': 'None', '22552': 'None', '22551': 'None', '23318': 'None', '23319': 'None', '23312': 'None', '23313': 'None', '23310': 'None', '23311': 'None', '23316': 'None', '23317': 'None', '23314': 'None', '23315': 'None', '23406': 'None', '23407': 'None', '23404': 'None', '23405': 'None', '23402': 'None', '23403': 'None', '23956': 'None', '23957': 'None', '23958': 'None', '23959': 'None', '23408': 'None', '23409': 'None', '23796': 'None', '23797': 'None', '23794': 'None', '23795': 'None', '23792': 'None', '23793': 'None', '23790': 'None', '23791': 'None', '23798': 'None', '23799': 'None', '22916': 'None', '22910': 'None', '22944': 'None', '22945': 'None', '22946': 'None', '22947': 'None', '22940': 'None', '22941': 'None', '22942': 'None', '22943': 'None', '22948': 'None', '22949': 'None', '23510': 'None', '23511': 'None', '23512': 'None', '23045': 'None', '23514': 'None', '23515': 'None', '23516': 'None', '23041': 'None', '23099': 'None', '23098': 'None', '23549': 'None', '23548': 'None', '23543': 'None', '23090': 'None', '23541': 'None', '23540': 'None', '23547': 'None', '23546': 'None', '23545': 'None', '23544': 'None', '23149': 'None', '23148': 'None', '23147': 'None', '23146': 'None', '23145': 'None', '23144': 'None', '23143': 'None', '23142': 'None', '23141': 'None', '23140': 'None', '23327': 'None', '23326': 'None', '23893': 'None', '23892': 'None', '23323': 'None', '23894': 'None', '23897': 'None', '23896': 'None', '23899': 'None', '23898': 'None', '22542': 'None', '22543': 'None', '22544': 'None', '22545': 'None', '22546': 'None', '22547': 'None', '23433': 'None', '23432': 'None', '23431': 'None', '23430': 'None', '23437': 'None', '23436': 'None', '23435': 'None', '23434': 'None', '23439': 'None', '23438': 'None', '22931': 'None', '22930': 'None', '22933': 'None', '22932': 'None', '22935': 'None', '22934': 'None', '22937': 'None', '22936': 'None', '22939': 'None', '22938': 'None', '22849': 'None', '22848': 'None', '22845': 'None', '22844': 'None', '22847': 'None', '22846': 'None', '22841': 'None', '22840': 'None', '22843': 'None', '22842': 'None', '23702': 'None', '23320': 'None', '22693': 'None', '23554': 'None', '23555': 'None', '23556': 'None', '23557': 'None', '23550': 'None', '23551': 'None', '23552': 'None', '23553': 'None', '22696': 'None', '23558': 'None', '23559': 'None', '23088': 'None', '23089': 'None', '23082': 'None', '23083': 'None', '23080': 'None', '23081': 'None', '23086': 'None', '23087': 'None', '23084': 'None', '23085': 'None', '23158': 'None', '23159': 'None', '23150': 'None', '23151': 'None', '23152': 'None', '23153': 'None', '23154': 'None', '23155': 'None', '23156': 'None', '23157': 'None', '23330': 'None', '23331': 'None', '23880': 'None', '23881': 'None', '23886': 'None', '23335': 'None', '23884': 'None', '23337': 'None', '23338': 'None', '23339': 'None', '23888': 'None', '23889': 'None', '23264': 'None', '23265': 'None', '22687': 'None', '22686': 'None', '22685': 'None', '22684': 'None', '23428': 'None', '23429': 'None', '22681': 'None', '22680': 'None', '23424': 'None', '23425': 'None', '23426': 'None', '23427': 'None', '23420': 'None', '23421': 'None', '23422': 'None', '23423': 'None', '23268': 'None', '23269': 'None', '22593': 'None', '22592': 'None', '22591': 'None', '22590': 'None', '22597': 'None', '22596': 'None', '22595': 'None', '22594': 'None', '22599': 'None', '22598': 'None', '22922': 'None', '22923': 'None', '22920': 'None', '22921': 'None', '22926': 'None', '22927': 'None', '22924': 'None', '22925': 'None', '22928': 'None', '22929': 'None', '22858': 'None', '22859': 'None', '22856': 'None', '22857': 'None', '22854': 'None', '22855': 'None', '22852': 'None', '22853': 'None', '22850': 'None', '22851': 'None', '23947': 'None', '23946': 'None', '23945': 'None', '23944': 'None', '23943': 'None', '23942': 'None', '23941': 'None', '23940': 'None', '23521': 'None', '23520': 'None', '23523': 'None', '23522': 'None', '23525': 'None', '23524': 'None', '23527': 'None', '23526': 'None', '23529': 'None', '23528': 'None', '23868': 'None', '23183': 'None', '23182': 'None', '23181': 'None', '23180': 'None', '23187': 'None', '23638': 'None', '23185': 'None', '23184': 'None', '23635': 'None', '23634': 'None', '23189': 'None', '23636': 'None', '23631': 'None', '23630': 'None', '23633': 'None', '23632': 'None', '22690': 'None', '22691': 'None', '22692': 'None', '23988': 'None', '22694': 'None', '22695': 'None', '23442': 'None', '22697': 'None', '23983': 'None', '22699': 'None', '23981': 'None', '23980': 'None', '23987': 'None', '23986': 'None', '23985': 'None', '23984': 'None', '23443': 'None', '23440': 'None', '23855': 'None', '23854': 'None', '23857': 'None', '23856': 'None', '22588': 'None', '23850': 'None', '23853': 'None', '23852': 'None', '22584': 'None', '22585': 'None', '22586': 'None', '22587': 'None', '22580': 'None', '22581': 'None', '22582': 'None', '22583': 'None', '23038': 'None', '23032': 'None', '22618': 'None', '22619': 'None', '23215': 'None', '23214': 'None', '22919': 'None', '22918': 'None', '22917': 'None', '23745': 'None', '22915': 'None', '22914': 'None', '22913': 'None', '22912': 'None', '22911': 'None', '23744': 'None', '23211': 'None', '23210': 'None', '23749': 'None', '22611': 'None', '22616': 'None', '23218': 'None', '22869': 'None', '22868': 'None', '22863': 'None', '22862': 'None', '22861': 'None', '22860': 'None', '22867': 'None', '22866': 'None', '22865': 'None', '22864': 'None', '23582': 'None', '23626': 'None', '23627': 'None', '23624': 'None', '23625': 'None', '23190': 'None', '23191': 'None', '23620': 'None', '23621': 'None', '22617': 'None', '23458': 'None', '23532': 'None', '23533': 'None', '23530': 'None', '23531': 'None', '23536': 'None', '23537': 'None', '23534': 'None', '23535': 'None', '23538': 'None', '23539': 'None', '23198': 'None', '23199': 'None', '23628': 'None', '23629': 'None', '23194': 'None', '23195': 'None', '23196': 'None', '23197': 'None', '23622': 'None', '23623': 'None', '23192': 'None', '23193': 'None', '23450': 'None'}}", u'type': u'POOLIN', u'events': 146000, u'lfn': u'/store/user/dummy/DummyLFN_1'}]}, u'taskDBInfo': {u'inputDataset': None, u'userWebDirURL': u'http://vocms0120.cern.ch/mon/cms1132/200427_061521:ccosby_crab_20200427_081512', u'publication': True, u'outputDatasets': []}}]}
+INFO 2020-04-27 17:29:48.038 UTC: 	 Running crab status first to fetch necessary information.
+DEBUG 2020-04-27 17:29:48.048 UTC: 	 Running on: Linux lxplus787.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-27 17:29:48.061 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-27 17:29:48.061 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-27 17:29:48.061 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-27 17:29:48.067 UTC: 	 Checking credentials
+DEBUG 2020-04-27 17:29:48.068 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-27 17:29:48.068 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-27 17:29:48.572 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43162
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:49.076 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43160
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:49.077 UTC: 	 Proxy lifetime 43162 secs is different from voms extension lifetime 43160 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-27 17:29:49.077 UTC: 	 Proxy valid for 11:59:20 hours
+DEBUG 2020-04-27 17:29:49.271 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:49.271 UTC: 	 Checking credentials
+DEBUG 2020-04-27 17:29:49.272 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-27 17:29:49.272 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-27 17:29:49.876 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43161
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:50.482 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43159
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:50.482 UTC: 	 Proxy lifetime 43161 secs is different from voms extension lifetime 43159 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-27 17:29:50.482 UTC: 	 Proxy valid for 11:59:19 hours
+DEBUG 2020-04-27 17:29:50.564 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-27 17:29:50.675 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:50.676 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-27 17:29:50.676 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-27 17:29:50.981 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 434:59:16  (18.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:29:50.981 UTC: 	 Myproxy is valid: 1565956
+DEBUG 2020-04-27 17:29:50.982 UTC: 	 Command use: status
+DEBUG 2020-04-27 17:29:50.982 UTC: 	 Options use: []
+DEBUG 2020-04-27 17:29:51.072 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-27 17:29:51.072 UTC: 	 Instance is prod
+DEBUG 2020-04-27 17:29:51.072 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-27 17:29:51.072 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-27 17:29:51.160 UTC: 	 Got information from server oracle database: {u'result': [u'200427_061521:ccosby_crab_20200427_081512', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-27 06:15:21.881181', u'None', u'2020-04-27 06:16:11.681919', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'2fadd71ecddbbae47c1975676507862201388703f85fac5b5c92d71d045f0796.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200427_081512-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0120.cern.ch/mon/cms1132/200427_061521:ccosby_crab_20200427_081512', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0120.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'ea475fea8e67dfb540c210cfd5e37e115e05126edf9fd0efd723c029f1ea1878.tar.gz', u'52056769', u'filetransfers', u'F', u'2001:1458:d00:1b::3bf', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-27 17:29:51.161 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512
+INFO 2020-04-27 17:29:51.161 UTC: 	 Task name:			200427_061521:ccosby_crab_20200427_081512
+INFO 2020-04-27 17:29:51.161 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0120.cern.ch - crab-prod-tw01
+INFO 2020-04-27 17:29:51.161 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-27 17:29:51.161 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200427_061521%3Accosby_crab_20200427_081512
+INFO 2020-04-27 17:29:51.161 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200427_061521%3Accosby_crab_20200427_081512
+INFO 2020-04-27 17:29:51.161 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-27 17:29:51.161 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 52056769)
+DEBUG 2020-04-27 17:29:51.161 UTC: 	 Webdir is located at http://vocms0120.cern.ch/mon/cms1132/200427_061521:ccosby_crab_20200427_081512
+DEBUG 2020-04-27 17:29:51.240 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0120/cms1132/200427_061521:ccosby_crab_20200427_081512
+DEBUG 2020-04-27 17:29:51.240 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0120/cms1132/200427_061521:ccosby_crab_20200427_081512/status_cache
+DEBUG 2020-04-27 17:29:51.283 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [9.0, 11374.0], 'StartTimes': [1587968545.0], 'SubmitTimes': [1587968181.0], 'JobIds': ['52056772.0'], 'EndTimes': [1587979919.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [757476], 'TotalUserCpuTimeHistory': [10138], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [435]}}
+INFO 2020-04-27 17:29:51.283 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2020-04-27 17:29:51.283 UTC: 	 
+Jobs status:                    finished     		100.0% (1/1)
+INFO 2020-04-27 17:29:51.359 UTC: 	 
+No publication information available yet
+INFO 2020-04-27 17:29:51.359 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2020-04-27 17:29:51.359 UTC: 	 
+Summary of run jobs:
+ * Memory: 739MB min, 739MB max, 740MB ave
+ * Runtime: 3:09:34 min, 3:09:34 max, 3:09:34 ave
+ * CPU eff: 93% min, 93% max, 93% ave
+ * Waste: 0:00:09 (0% of total)
+
+INFO 2020-04-27 17:29:51.432 UTC: 	 Will save lumi files into output directory /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/results
+INFO 2020-04-27 17:29:51.432 UTC: 	 Summary from jobs in status 'finished':
+INFO 2020-04-27 17:29:51.432 UTC: 	   Number of files processed: 1
+  Number of events read: 146000
+  Number of events written in EDM files: 0
+  Number of events written in TFileService files: 0
+  Number of events written in other type of files: 0
+INFO 2020-04-27 17:29:51.434 UTC: 	   Processed lumis written to processedLumis.json
+INFO 2020-04-27 17:29:51.438 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/crab.log
+DEBUG 2020-04-27 17:30:08.293 UTC: 	 Running on: Linux lxplus787.cern.ch 3.10.0-1062.18.1.el7.x86_64 #1 SMP Tue Mar 17 23:49:17 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux - CentOS Linux 7 (Core)
+DEBUG 2020-04-27 17:30:08.306 UTC: 	 OpenSSl version: OpenSSL 1.0.2k-fips  26 Jan 2017 (Library: OpenSSL 1.0.2d-fips 9 Jul 2015)
+DEBUG 2020-04-27 17:30:08.307 UTC: 	 Executing command: 'status'
+DEBUG 2020-04-27 17:30:08.307 UTC: 	 Found CRAB cache file /afs/cern.ch/user/c/ccosby/.crab3
+DEBUG 2020-04-27 17:30:08.314 UTC: 	 Checking credentials
+DEBUG 2020-04-27 17:30:08.315 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-27 17:30:08.315 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-27 17:30:08.920 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43142
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:30:09.525 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43140
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:30:09.525 UTC: 	 Proxy lifetime 43142 secs is different from voms extension lifetime 43140 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-27 17:30:09.525 UTC: 	 Proxy valid for 11:59:00 hours
+DEBUG 2020-04-27 17:30:09.637 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:30:09.637 UTC: 	 Checking credentials
+DEBUG 2020-04-27 17:30:09.637 UTC: 	 Found proxy file /tmp/x509up_u119364
+DEBUG 2020-04-27 17:30:09.637 UTC: 	 Getting proxy life time left
+DEBUG 2020-04-27 17:30:10.242 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -timeleft
+ output : 43140
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:30:10.849 UTC: 	 Executing : 
+ command : voms-proxy-info -file /tmp/x509up_u119364 -actimeleft
+ output : 43139
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:30:10.849 UTC: 	 Proxy lifetime 43140 secs is different from voms extension lifetime 43139 secs for proxy: /tmp/x509up_u119364
+DEBUG 2020-04-27 17:30:10.849 UTC: 	 Proxy valid for 11:58:59 hours
+DEBUG 2020-04-27 17:30:10.933 UTC: 	 Registering user credentials for server /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+DEBUG 2020-04-27 17:30:11.042 UTC: 	 Executing : 
+ command : openssl x509 -in ~/.globus/usercert.pem -subject -noout
+ output : subject= /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:30:11.042 UTC: 	 Getting myproxy life time left for myproxy.cern.ch
+DEBUG 2020-04-27 17:30:11.042 UTC: 	 Calculating hash of /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby_cmsweb.cern.ch for credential name
+DEBUG 2020-04-27 17:30:11.447 UTC: 	 Executing : 
+ command : myproxy-info -l 26967ec133c94bf7c0631336874999a7497a622e -s myproxy.cern.ch
+ output : username: 26967ec133c94bf7c0631336874999a7497a622e
+owner: /DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby
+  renewal policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  trusted retrieval policy: /DC=ch/DC=cern/OU=computers/CN=vocms0105.cern.ch|/DC=ch/DC=cern/OU=computers/CN=crab-(preprod|prod|dev)-tw(02|01).cern.ch|/DC=ch/DC=cern/OU=computers/CN=(ddi|ddidk|mytw).cern.ch
+  timeleft: 434:58:55  (18.1 days)
+
+ error: 
+ retcode : 0
+DEBUG 2020-04-27 17:30:11.448 UTC: 	 Myproxy is valid: 1565935
+DEBUG 2020-04-27 17:30:11.449 UTC: 	 Command use: status
+DEBUG 2020-04-27 17:30:11.449 UTC: 	 Options use: ['crab_20200427_081512/']
+DEBUG 2020-04-27 17:30:11.514 UTC: 	 CRABClient version: 3.3.2001
+DEBUG 2020-04-27 17:30:11.515 UTC: 	 Instance is prod
+DEBUG 2020-04-27 17:30:11.515 UTC: 	 Server base url is cmsweb.cern.ch
+DEBUG 2020-04-27 17:30:11.515 UTC: 	 Command url /crabserver/prod/workflow
+DEBUG 2020-04-27 17:30:11.590 UTC: 	 Got information from server oracle database: {u'result': [u'200427_061521:ccosby_crab_20200427_081512', u'None', u'None', u'SUBMITTED', u'SUBMIT', u'2020-04-27 06:15:21.881181', u'None', u'2020-04-27 06:16:11.681919', u'None', u'CMSSW_10_2_3', u'slc7_amd64_gcc700', u'None', u'F', u'0', u"['T2_CH_CERN']", u'[]', u'FileBased', u"{'splitOnRun': False, 'halt_job_on_file_boundaries': False, 'files_per_job': 10000, 'runs': [], 'lumis': []}", u'2fadd71ecddbbae47c1975676507862201388703f85fac5b5c92d71d045f0796.tar.gz', u'https://cmsweb.cern.ch/crabcache', u'ccosby', u'/DC=ch/DC=cern/OU=Organic Units/OU=Users/CN=ccosby/CN=834196/CN=Christopher Steven Cosby', u'cms', u'None', u'None', u'crab_20200427_081512-00000000000000000000000000000000', u'F', u'T2_CH_CERNBOX', u'https://cmsweb.cern.ch/dbs/prod/global/DBSReader', u'https://cmsweb.cern.ch/dbs/prod/phys03/DBSWriter', u'T', u'[]', u"['tree.root']", u'[]', u'Analysis', u'pythia', u'None', u'{}', u'[]', u'F', u'crab-prod-tw01', u'[]', u'1250', u'1', u'2000', u'10', u'None', u'[]', u'http://vocms0120.cern.ch/mon/cms1132/200427_061521:ccosby_crab_20200427_081512', u'None', u'[]', u'[]', u'https://cmsweb.cern.ch/crabserver/prod', u'cmsgwms-collector-global.cern.ch:9620,cmsgwms-collector-global.fnal.gov', u'crab3@vocms0120.cern.ch', u'F', u"['root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-24.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-51.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-23.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-38.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_10.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-54.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-4.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-41.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-26.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-53.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-49.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-25.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-18.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-22.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-28.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-21.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-16.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_20.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-40.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-8.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-56.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-44.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_17.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-36.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-30.root', 'root://eosuser.cern.ch//eos/user/c/ccosby/miniAOD/2018/DarkPhoton/crab_20200412_052026/200412_032038/0000/miniaod_1-7.root']", u'T', u'/store/user/ccosby/', u'F', u'None', u'F', u'None', u'DarkPhoton2018', u'None', u'ea475fea8e67dfb540c210cfd5e37e115e05126edf9fd0efd723c029f1ea1878.tar.gz', u'52056769', u'filetransfers', u'F', u'2001:1458:d00:1b::3bf', u'0.0', u'None'], u'desc': {u'columns': [u'tm_taskname', u'tm_activity', u'panda_jobset_id', u'tm_task_status', u'tm_task_command', u'tm_start_time', u'tm_start_injection', u'tm_end_injection', u'tm_task_failure', u'tm_job_sw', u'tm_job_arch', u'tm_input_dataset', u'tm_nonvalid_input_dataset', u'tm_use_parent', u'tm_site_whitelist', u'tm_site_blacklist', u'tm_split_algo', u'tm_split_args', u'tm_user_sandbox', u'tm_cache_url', u'tm_username', u'tm_user_dn', u'tm_user_vo', u'tm_user_role', u'tm_user_group', u'tm_publish_name', u'tm_publish_groupname', u'tm_asyncdest', u'tm_dbs_url', u'tm_publish_dbs_url', u'tm_publication', u'tm_outfiles', u'tm_tfile_outfiles', u'tm_edm_outfiles', u'tm_job_type', u'tm_generator', u'tm_events_per_lumi', u'tm_arguments', u'panda_resubmitted_jobs', u'tm_save_logs', u'tw_name', u'tm_user_infiles', u'tm_maxjobruntime', u'tm_numcores', u'tm_maxmemory', u'tm_priority', u'tm_output_dataset', u'tm_task_warnings', u'tm_user_webdir', u'tm_scriptexe', u'tm_scriptargs', u'tm_extrajdl', u'tm_asourl', u'tm_collector', u'tm_schedd', u'tm_dry_run', u'tm_user_files', u'tm_transfer_outputs', u'tm_output_lfn', u'tm_ignore_locality', u'tm_fail_limit', u'tm_one_event_mode', u'tm_secondary_input_dataset', u'tm_primary_dataset', u'tm_last_publication', u'tm_debug_files', u'clusterid', u'tm_asodb', u'tm_ignore_global_blacklist', u'tm_submitter_ip_addr', u'tm_totalunits', u'tm_ddm_reqid']}}
+INFO 2020-04-27 17:30:11.590 UTC: 	 CRAB project directory:		/afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512
+INFO 2020-04-27 17:30:11.590 UTC: 	 Task name:			200427_061521:ccosby_crab_20200427_081512
+INFO 2020-04-27 17:30:11.590 UTC: 	 Grid scheduler - Task Worker:	crab3@vocms0120.cern.ch - crab-prod-tw01
+INFO 2020-04-27 17:30:11.590 UTC: 	 Status on the CRAB server:	SUBMITTED
+INFO 2020-04-27 17:30:11.590 UTC: 	 Task URL to use for HELP:	https://cmsweb.cern.ch/crabserver/ui/task/200427_061521%3Accosby_crab_20200427_081512
+INFO 2020-04-27 17:30:11.590 UTC: 	 Dashboard monitoring URL:	https://monit-grafana.cern.ch/d/cmsTMDetail/cms-task-monitoring-task-view?orgId=11&var-user=ccosby&var-task=200427_061521%3Accosby_crab_20200427_081512
+INFO 2020-04-27 17:30:11.590 UTC: 	 In case of issues with the dashboard, please provide feedback to hn-cms-computing-tools@cern.ch
+DEBUG 2020-04-27 17:30:11.591 UTC: 	 The CRAB server submitted your task to the Grid scheduler (cluster ID: 52056769)
+DEBUG 2020-04-27 17:30:11.591 UTC: 	 Webdir is located at http://vocms0120.cern.ch/mon/cms1132/200427_061521:ccosby_crab_20200427_081512
+DEBUG 2020-04-27 17:30:11.666 UTC: 	 Proxied webdir is located at https://cmsweb.cern.ch/scheddmon/0120/cms1132/200427_061521:ccosby_crab_20200427_081512
+DEBUG 2020-04-27 17:30:11.666 UTC: 	 Retrieving 'status_cache' file from https://cmsweb.cern.ch/scheddmon/0120/cms1132/200427_061521:ccosby_crab_20200427_081512/status_cache
+DEBUG 2020-04-27 17:30:11.713 UTC: 	 Got information from status cache file: {'1': {'Retries': 0, 'WallDurations': [9.0, 11374.0], 'StartTimes': [1587968545.0], 'SubmitTimes': [1587968181.0], 'JobIds': ['52056772.0'], 'EndTimes': [1587979919.0], 'Restarts': 0, 'RecordedSite': True, 'State': 'finished', 'ResidentSetSize': [757476], 'TotalUserCpuTimeHistory': [10138], 'SiteHistory': ['Unknown', 'T2_CH_CERN'], 'TotalSysCpuTimeHistory': [435]}}
+INFO 2020-04-27 17:30:11.713 UTC: 	 Status on the scheduler:	COMPLETED
+INFO 2020-04-27 17:30:11.713 UTC: 	 
+Jobs status:                    finished     		100.0% (1/1)
+INFO 2020-04-27 17:30:11.788 UTC: 	 
+No publication information available yet
+INFO 2020-04-27 17:30:11.788 UTC: 	 
+Warning: the max jobs runtime is less than 30% of the task requested value (1250 min), please consider to request a lower value for failed jobs (allowed through crab resubmit) and/or improve the jobs splitting (e.g. config.Data.splitting = 'Automatic') in a new task.
+INFO 2020-04-27 17:30:11.789 UTC: 	 
+Summary of run jobs:
+ * Memory: 739MB min, 739MB max, 740MB ave
+ * Runtime: 3:09:34 min, 3:09:34 max, 3:09:34 ave
+ * CPU eff: 93% min, 93% max, 93% ave
+ * Waste: 0:00:09 (0% of total)
+
+INFO 2020-04-27 17:30:11.793 UTC: 	 Log file is /afs/cern.ch/user/c/ccosby/lowMassZPrime/triggerStudy/CMSSW_10_2_3/src/DileptonAnalysis/AnalysisStep/crab/2018miniAOD/crab_20200427_081512/crab.log
